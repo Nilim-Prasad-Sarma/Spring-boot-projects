@@ -1,0 +1,14 @@
+
+l	java:S125,"<This block of commented-out lines of code should be removed.(‘çÝªþÿÿÿÿHœRMAJORZ
+CODE_SMELL
+Ú
+java:S1130!"­Remove the declaration of thrown exception 'com.fasterxml.jackson.databind.JsonMappingException' which is a subclass of 'com.fasterxml.jackson.core.JsonProcessingException'.(´ðË¾HRMINORZ
+CODE_SMELL
+	java:S1172"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á²åùÿÿÿÿHŸRMINORZ
+CODE_SMELL
+U
+java:S1452!"&Remove usage of generic wildcard type.(´ðË¾H RCRITICALZ
+CODE_SMELL
+…
+java:S2293-"YReplace the type specification in this constructor call with the diamond operator ("<>").(ŽþÒÐH¡RMINORZ
+CODE_SMELL

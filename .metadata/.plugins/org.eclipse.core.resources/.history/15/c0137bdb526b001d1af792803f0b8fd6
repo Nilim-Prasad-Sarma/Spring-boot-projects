@@ -1,0 +1,31 @@
+package com.te.assignment.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.te.assignment.pojo.Campaign;
+import com.te.assignment.pojo.MapDetails;
+import com.te.assignment.service.CampaignService;
+
+@Controller
+public class CampaignController {
+	@Autowired
+	private CampaignService campaignService;
+	ObjectMapper mapper = new ObjectMapper();
+
+	@GetMapping("/getAll")
+	public ResponseEntity<?> getAllUser() {
+		List<Campaign> campaign = campaignService.getCampaign();
+		for (Campaign campaign2 : campaign) {
+
+			mapper.readValue(campaign2, MapDetails.class);
+		}
+		return new ResponseEntity<List<Campaign>>(campaign, HttpStatus.OK);
+	}
+}
